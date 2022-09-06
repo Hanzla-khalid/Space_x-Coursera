@@ -95,11 +95,8 @@ def get_scatter(site,payload):
         payload_df= site_df[(site_df["Payload Mass (kg)"] < higher)  & (site_df["Payload Mass (kg)"] > lower)]
         scatter = px.scatter(payload_df,x="Payload Mass (kg)",y="class",color="Booster Version",hover_data=['Launch Site'])
 
-
     return scatter
 
 
-
-# Run the app
 if __name__ == '__main__':
     app.run_server()
